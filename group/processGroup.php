@@ -3,11 +3,10 @@
 	include('../function.php');
 	// 檢查欄位是否正確
 	$checkColumn = true;
-	echo 'yes';
 	// 儲存資料
 	$count = 0;
 	for ($i = 0; $i < 5; $i++){
-		if (！empty($_POST['groupName'.$i])){
+		if (empty($_POST['groupName'.$i]) == false){
 			$_SESSION['data']['groupName'.$i] = $_POST['groupName'.$i];
 			$count++;
 		}
@@ -23,11 +22,9 @@
 	// 若欄位不正確返回 index.php
 	// 若欄位正確前往   result.php
 	if (!$checkColumn){
-		echo 'fail';
-		header('Location: index.php');
+		header('Location:index.php');
 	}else{
-		echo 'success';
 		$_SESSION['success'] = true;
-		header('Location: result.php');
+		header('Location:result.php');
 	}	
 ?>
