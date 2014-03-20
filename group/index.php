@@ -32,7 +32,7 @@
 			$_SESSION['placeholder']['groupName'.$i] = '姓名'.$chineseNumber[$i];
 		}
 		echo printTextForm('school', '學校',  $_SESSION['data']['groupSchool'], $_SESSION['additionClass']['groupSchool'], $_SESSION['placeholder']['groupSchool'], '');
-		echo printTextForm('city', '縣/市',  $_SESSION['additionClass']['groupCity'], $_SESSION['additionClass']['groupCity'], $_SESSION['placeholder']['groupCity'], '');
+		echo printTextForm('city', '縣/市',  $_SESSION['data']['groupCity'], $_SESSION['additionClass']['groupCity'], $_SESSION['placeholder']['groupCity'], '');
 		echo '<HR>';
 		for ($i= 0; $i < 5; $i++)
 			echo printTextForm('groupName'.$i, '姓名'.$chineseNumber[$i],  $_SESSION['data']['groupName'.$i], $_SESSION['additionClass']['groupName'.$i], $_SESSION['placeholder']['groupName'.$i], '');
