@@ -23,8 +23,7 @@
 		$_SESSION['success'] = true;
 		//header('Location: result.php');
 		echo $_POST['name']."<br>";
-		echo $id[$i]['id']."<br>";
-		echo $_POST[$id[$i]['id']];
-		echo '<br>'.$_SESSION['data'][$id[$i]['id']];
+		echo $_POST[$id[0]['id']];
+		echo '<br>'.$_SESSION['data'][$id[0]['id']];
 	}	
 ?>
