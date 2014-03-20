@@ -25,6 +25,10 @@
 	<h1 align='center'>第15屆暑期中央松數營報名表</h1>
 	<form class='form-horizontal' role='form' id='joinForm' action='processGroup.php' method='POST'>
 	<?php
+		if ($_SESSION['placeholder']){
+			$_SESSION['placeholder']['groupSchool'] = '學校';
+			$_SESSION['placeholder']['groupCity'] = '縣/市';
+		}
 		echo printTextForm('school', '學校', 'school', $_SESSION['additionClass']['groupSchool'], $_SESSION['placeholder']['groupSchool'], '');
 		echo printTextForm('city', '縣/市', 'city', $_SESSION['additionClass']['groupCity'], $_SESSION['placeholder']['groupCity'], '');
 	?>
