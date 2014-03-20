@@ -24,7 +24,8 @@
 		// 顯示報名成功頁面
 	}else{
 		// 顯示報名頁面
-		echo printTextForm("name", "姓名", "", "", "姓名");
+		// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
+		echo printTextForm("name", "姓名", "顆顆", "has-success", "姓名");
 	}
 ?>
 </body
