@@ -22,27 +22,31 @@
 </head>
 <body>
 <?php
-	$names;
-	for ($i = 0; $i < 5; $i++){
-		if ($_SESSION['data']['groupName'.$i])
-				$names = $names."<td><tr>姓名</tr><tr>".$_SESSION['data']['groupName'.$i]."</tr><td>";
-	}
+	if ($_SESSION['success']){
+		$names;
+		for ($i = 0; $i < 5; $i++){
+			if ($_SESSION['data']['groupName'.$i])
+					$names = $names."<td><tr>姓名</tr><tr>".$_SESSION['data']['groupName'.$i]."</tr><td>";
+		}
 
-	include '../../sqlInfo.php';
-	$connect = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASSWD);
-	$connect->query('SET NAMES UTF8');
-	$result = $connect->prepare("INSERT into join_member values(
-										:school,
-										:city,
-										:names)");
-	$where = array(
-				':school' => $_SESSION['data']['groupSchool'], 
-				':city' => $_SESSION['data']['groupCity'],
-				':names' => $names);
-	$result->execute($where);
-	session_destroy();
-	echo '<div class="container center" align="center"><h1>恭喜你團報成功了！</h1>';
-	echo "<p align='center'></p></div>";
+		include '../../sqlInfo.php';
+		$connect = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASSWD);
+		$connect->query('SET NAMES UTF8');
+		$result = $connect->prepare("INSERT into join_member values(
+											:school,
+											:city,
+											:names)");
+		$where = array(
+					':school' => $_SESSION['data']['groupSchool'], 
+					':city' => $_SESSION['data']['groupCity'],
+					':names' => $names);
+		$result->execute($where);
+		session_destroy();
+		echo '<div class="container center" align="center"><h1>恭喜你團報成功了！</h1>';
+		echo "<p align='center'></p></div>";
+	}else{
+		header('Location: index.php');
+	}
 ?>
 </body>
 </html>
