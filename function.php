@@ -1,6 +1,6 @@
 <?php
 	$id = array(
-		0=> array('id'=>'name', 'name'=>'姓名', 'type'=>'text'),
+		0=> array('id'=>'name', 'name'=>'姓名', 'type'=>'text', 'required'=>true),
 		1=> array('id'=>'nickname', 'name'=>'綽號', 'type'=>'text'),
 		2=> array('id'=>'sex', 'name'=>'性別', 'type'=>'radio', 'lable'=>array(0=>'男', 1=>'女'), 'value'=>array(0=>'男', 1=>'女'), 'check'=>array(0=>true, 1=>false)),
 		3=> array('id'=>'securityNumber', 'name'=>'身分證字號', 'type'=>'text'),
