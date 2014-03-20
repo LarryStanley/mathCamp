@@ -18,7 +18,7 @@
 	if (!eregi("^[_.0-9a-z-]+@([0-9a-z-]+.)+[a-z]{2,3}$",$_POST['email'])){
 		$checkColumn = false;
 		$_SESSION['additionClass']['email'] = "has-error";
-		$_SESSION['additionText']['email'] = "你的Email有點問題喔!稍微檢查一下吧!"
+		$_SESSION['additionText']['email'] = "你的Email有點問題喔!稍微檢查一下吧!";
 	}
 	
 	// 檢查身分證字號
