@@ -7,7 +7,7 @@
 	// 儲存資料
 	$count = 0;
 	for ($i = 0; $i < 5; $i++){
-		if ($_POST['groupName'.$i]){
+		if (empty($_POST['groupName'.$i])){
 			$_SESSION['data']['groupName'.$i] = $_POST['groupName'.$i];
 			$count++;
 		}
