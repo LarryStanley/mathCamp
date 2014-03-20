@@ -23,13 +23,13 @@
 <body>
 <?php
 	if ($_SESSION['success']){
-		$names;
+		include '../../sqlInfo.php';
+		$names = '';
 		for ($i = 0; $i < 5; $i++){
 			if ($_SESSION['data']['groupName'.$i])
-					$names = $names."<td><tr>姓名</tr><tr>".$_SESSION['data']['groupName'.$i]."</tr><td>";
+					$names = $names.", ".$_SESSION['data']['groupName'.$i];
 		}
 
-		include '../../sqlInfo.php';
 		$connect = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASSWD);
 		$connect->query('SET NAMES UTF8');
 		$result = $connect->prepare("INSERT into join_member values(

@@ -26,8 +26,8 @@
 	// 若欄位錯誤返回 index.php
 	if ($_SESSION['success']){
 		$result = "<div class='container joinForm'><h1 align='center'>第15屆暑期中央松數營報名表 - 團報單</h1><table class='table table-striped'>";
-		$result = $result."<td><tr>學校</tr><tr>".$_SESSION['data']['groupSchool']."</tr><td>";
-		$result = $result."<td><tr>縣/市</tr><tr>".$_SESSION['data']['groupCity']."</tr><td>";
+		$result = $result."<tr><td>學校</td><td>".$_SESSION['data']['groupSchool']."</td><tr>";
+		$result = $result."<tr><td>縣/市</td><td>".$_SESSION['data']['groupCity']."</tdr><tr>";
 		for ($i = 0; $i < 5; $i++){
 			if ($_SESSION['data']['groupName'.$i])
 				$result = $result."<tr><td>姓名</td><td>".$_SESSION['data']['groupName'.$i]."</td><tr>";
