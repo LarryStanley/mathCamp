@@ -31,6 +31,7 @@
 			$result = $result."</tr>";
 		}
 		$result = $result."</div>";
+		echo $result;
 	}else
 		header('Location: index.php');
 ?>
