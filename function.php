@@ -53,6 +53,6 @@
 	}
 	
 	function printText($text) {
-		return "<p align='center'>".$text."</p>"
+		return "<p align='center'>".$text."</p>";
 	}
 ?>
