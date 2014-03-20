@@ -11,17 +11,18 @@
 			$_SESSION['additionClass'][$id[$i]['id']] = "has-success";
 	}
 	
+	// 儲存資料
+	for ($i = 0; $i < sizeof($id); $i++){
+		if ($id[$i]['type'] != 'addition')
+			$_SESSION['data'][$id[$i]['id']] = $_POST[$id[$i]['id']];
+	}
+	
 	// 若欄位不正確返回 index.php
 	// 若欄位正確前往   result.php
 	if (!$checkColumn){
 		header('Location: index.php');
 	}else{
 		$_SESSION['success'] = true;
-		// 儲存資料
-		for ($i = 0; $i < sizeof($id); $i++){
-			if ($id[$i]['type'] != 'addition')
-				$_SESSION['data'][$id[$i]['id']] = $_POST[$id[$i]['id']];
-		}
 		header('Location: result.php');
 	}	
 ?>

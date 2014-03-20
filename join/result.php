@@ -31,7 +31,7 @@
 			$result = $result."</tr>";
 		}
 		$result = $result."</table>";
-		$result = $result."<a class='btn btn-default' href='index.php'>修改</a></div>"
+		$result = $result."<a class='btn btn-default' href='index.php'>修改</a></div>";
 		echo $result;
 	}else
 		header('Location: index.php');
