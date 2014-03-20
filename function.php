@@ -26,14 +26,14 @@
 	
 	function printRadioForm($id, $radioName, $value, $label, $check) {
 		// $value, $label, $check 皆為陣列形態
-		$result = "<div class='form-group'><label for='sex' class='col-sm-4 control-label'>".$radioName."</label>";
+		$result = "<div class='form-group'><label for='sex' class='col-sm-4 control-label'>".$radioName."</label><div class='col-sm-8'>";
 		for ($i = 0; $i < sizeof($value); $i++){
 			$result = $result."<div class='radio'><label><input type='radio' name='".$id."' value='".$value[$i]."' ";
 			if ($check[$i])
 				$result = $result."checked";
 			$result = $result.">".$label[$i]."</label></div>";
 		}
-		$result = $result."</div>";
+		$result = $result."</div></div>";
 		return $result;
 	}
 ?>
