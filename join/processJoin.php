@@ -14,7 +14,7 @@
 	}
 	
 	// 檢查email
-	if (!eregi("^[_.0-9a-z-]+@([0-9a-z-]+.)+[a-z]{2,3}$",$_POST['email'])
+	if (!eregi("^[_.0-9a-z-]+@([0-9a-z-]+.)+[a-z]{2,3}$",$_POST['email']))
 		$checkColumn = false;
 	
 	// 儲存資料
