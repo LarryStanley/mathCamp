@@ -34,7 +34,7 @@
 		else if($id[$i]['type'] = 'radio')
 			echo printRadioForm($id[$i]['id'], $id[$i]['name'], $id[$i]['value'], $id[$i]['lable'], $id[$i]['check']);
 		else if($id[$i]['type'] == 'addition')
-			echo printAdditionText($id[$i]['text']);
+			echo printAdditionText('顆顆');
 	}
 ?>
 		<div align='right'>
