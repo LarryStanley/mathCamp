@@ -3,7 +3,7 @@
 	include('../function.php');
 	// 檢查欄位是否正確
 	$checkColumn = true;
-	
+	echo 'yes';
 	// 儲存資料
 	$count = 0;
 	for ($i = 0; $i < 5; $i++){
