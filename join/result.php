@@ -25,11 +25,12 @@
 	if ($_SESSION['success']){
 		$result = "<div class='container joinForm'><h1 align='center'>第15屆暑期中央松數營報名表</h1><table class='table table-striped'>";
 		for ($i = 0; $i < sizeof($id); $i++){
-			if ($id[$i]['type'] != 'addition')
+			if ($id[$i]['type'] != 'addition'){
 				$result = $result."<tr>";
 				$result = $result."<td>".$id[$i]['name']."</td>";
 				$result = $result."<td>".$_SESSION['data'][$id[$i]['id']]."</td>";
 				$result = $result."</tr>";
+			}
 		}
 		$result = $result."</table>";
 		$result = $result."<a class='btn btn-default' href='index.php'>修改</a></div>";
