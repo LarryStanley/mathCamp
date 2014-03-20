@@ -22,6 +22,7 @@
 	}else{
 		$_SESSION['success'] = true;
 		//header('Location: result.php');
+		echo $_POST['name']."<br>";
 		echo $_POST[$id[$i]['id']];
 		echo '<br>'.$_SESSION['data'][$id[$i]['id']];
 	}	
