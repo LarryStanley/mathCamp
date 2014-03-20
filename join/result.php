@@ -27,7 +27,7 @@
 		for ($i = 0; $i < sizeof($id); $i++){
 			$result = $result."<tr>";
 			$result = $result."<td>".$id[$i]['name']."</td>";
-			$result = $result."<td>".$_SESSION[$id[$i]['id']]."</td>";
+			$result = $result."<td>".$_SESSION['data'][$id[$i]['id']]."</td>";
 			$result = $result."</tr>";
 		}
 		$result = $result."</table></div>";

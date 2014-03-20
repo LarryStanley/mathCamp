@@ -28,8 +28,8 @@
 	
 	// 報名表陣列
 	$idInfo = array(
-		0=>array("id"=>"name", "labelName"=>"姓名", "value"=>$_SESSION['name'], "additionClass"=>$_SESSION['additionClass']['name'], "placeholder"=>"姓名"),
-		1=>array("id"=>"nickname", "labelName"=>"綽號", "value"=>$_SESSION['nickname'], "additionClass"=>$_SESSION['additionClass']['nickname'], "placeholder"=>"綽號"),
+		0=>array("id"=>"name", "labelName"=>"姓名", "value"=>$_SESSION['data']['name'], "additionClass"=>$_SESSION['additionClass']['name'], "placeholder"=>"姓名"),
+		1=>array("id"=>"nickname", "labelName"=>"綽號", "value"=>$_SESSION['data']['nickname'], "additionClass"=>$_SESSION['additionClass']['nickname'], "placeholder"=>"綽號"),
 	);
 	// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
 	for ($i = 0; $i < sizeof($idInfo); $i++) {
