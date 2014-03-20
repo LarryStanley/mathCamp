@@ -10,7 +10,7 @@
 		7=> array('id'=>'email', 'name'=>'Email', 'type'=>'text', 'required'=>true),
 		8=> array('id'=>'school', 'name'=>'就讀學校', 'type'=>'text', 'required'=>true),
 		9=> array('id'=>'grade', 'name'=>'年級', 'type'=>'text', 'required'=>true),
-		10=> array('type'=>'text', 'text'=>'這很重要，關於你的緊急聯絡人'),
+		10=> array('type'=>'text', 'addition'=>'這很重要，關於你的緊急聯絡人'),
 		11=> array('id'=>'parentsName', 'name'=>'緊急聯絡人姓名', 'type'=>'text', 'required'=>true),
 		12=> array('id'=>'parentsRelation', 'name'=>'緊急聯絡人關係', 'type'=>'text', 'required'=>true),
 		13=> array('id'=>'parentsPhone', 'name'=>'緊急聯絡人電話', 'type'=>'text', 'required'=>true),
@@ -52,7 +52,7 @@
 		return $result;
 	}
 	
-	function printText($text) {
+	function printAddition($text) {
 		return "<p align='center'>".$text."</p>";
 	}
 ?>
