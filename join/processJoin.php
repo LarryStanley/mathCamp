@@ -4,12 +4,13 @@
 	// 檢查欄位是否正確
 	$checkColumn = true;
 	for ($i = 0; $i < sizeof($id); $i++){
+		if ($id[$i]['required']){
 			if (empty($_POST[$id[$i]['id']])){
 				$_SESSION['additionClass'][$id[$i]['id']] = "has-error";
 				$checkColumn = false;
 			}else
 				$_SESSION['additionClass'][$id[$i]['id']] = "has-success";
-
+		}
 	}
 	
 	// 儲存資料
