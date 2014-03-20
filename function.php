@@ -14,6 +14,9 @@
 		11=> array('id'=>'parentsRelation', 'name'=>'關係', 'type'=>'text'),
 		12=> array('id'=>'parentsPhone', 'name'=>'電話', 'type'=>'text'),
 		13=> array('id'=>'parentsAddress', 'name'=>'地址', 'type'=>'text'),
+		14=> array('id'=>'tshirtsize', 'name'=>'活動T-shirt size', 'type'=>'radio', 'lable'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'value'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'check'=>array(0=>true, 1=>false, 2=>false, 3=>false, 4=>false)),
+		15=> array('id'=>'diet', 'name'=>'特殊飲食習慣', 'type'=>'radio', 'lable'=>array(0=>'葷', 1=>'素'), 'value'=>array(0=>'葷', 1=>'素'), 'check'=>array(0=>true, 1=>false)),
+		16=> array('id'=>'illness', 'name'=>'特殊病例', 'type'=>'text'),
 	);
 	
 	function printTextForm($id, $labelName, $value, $additionClass, $placeholder) {
