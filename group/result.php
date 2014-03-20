@@ -30,7 +30,7 @@
 		$result = $result."<td><tr>縣/市</tr><tr>".$_SESSION['data']['groupCity']."</tr><td>";
 		for ($i = 0; $i < 5; $i++){
 			if ($_SESSION['data']['groupName'.$i])
-				$result = $result."<td><tr>姓名</tr><tr>".$_SESSION['data']['groupName'.$i]."</tr><td>";
+				$result = $result."<tr><td>姓名</td><td>".$_SESSION['data']['groupName'.$i]."</td><tr>";
 		}
 		$result = $result."</table>";
 		$result = $result."<div align='center'><a class='btn btn-default' href='index.php' align='right'>修改</a>  ";
