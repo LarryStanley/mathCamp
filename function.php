@@ -24,10 +24,12 @@
 		21=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
 	);
 	
-	function printTextForm($id, $labelName, $value, $additionClass, $placeholder) {
+	function printTextForm($id, $labelName, $value, $additionClass, $placeholder, $additionText) {
 		$result = "<div class='form-group ".$additionClass."' id='".$id."Form'>";
 		$result = $result."<label class='col-sm-4 control-label'>".$labelName."</label>";
 		$result = $result."<div class='col-sm-8'><input type='text' class='form-control' id='".$id."' name='".$id."' placeholder='".$placeholder."' value='".$value."'>";
+		if ($additionText)
+			$result = $result."<p align='right'>".$additionText."</p>";
 		$result = $result."</div></div>";
 		return $result;
 	}

@@ -18,14 +18,14 @@
 	if (!eregi("^[_.0-9a-z-]+@([0-9a-z-]+.)+[a-z]{2,3}$",$_POST['email'])){
 		$checkColumn = false;
 		$_SESSION['additionClass']['email'] = "has-error";
-		$_SESSION['placeholder'][$id[$i]['id']] = "你的Email有點問題喔!稍微檢查一下吧!";
+		$_SESSION['additionText']['email'] = "你的Email有點問題喔!稍微檢查一下吧!"
 	}
 	
 	// 檢查身分證字號
 	if (!checkSecurityNumber($_POST['securityNumber'])){
 		$checkColumn = false;
 		$_SESSION['additionClass']['securityNumber'] = "has-error";
-		$_SESSION['placeholder'][$id[$i]['id']] = "你的身分證字號有點問題喔!稍微檢查一下吧!";
+		$_SESSION['additionText']['securityNumber'] = "你的身分證字號有點問題喔!稍微檢查一下吧!";
 	}
 	
 	// 儲存資料
