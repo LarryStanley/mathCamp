@@ -16,7 +16,7 @@
 	
 	if ($count != 3 || $count != 5){
 		$checkColumn = false;
-		$_SESSION['groupAlert'] = '團報人數必須三人或五人喔！！';
+		$_SESSION['groupAlert'] = '團報人數必須三人或五人喔！！'.$count;
 	}
 	
 	// 若欄位不正確返回 index.php
