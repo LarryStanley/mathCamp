@@ -25,14 +25,12 @@
 	// 若欄位都正確顯示結果
 	// 若欄位錯誤返回 index.php
 	if ($_SESSION['success']){
-		$result = "<div class='container joinForm'><h1 align='center'>第15屆暑期中央松數營報名表</h1><table class='table table-striped'>";
-		for ($i = 0; $i < sizeof($id); $i++){
-			if ($id[$i]['type'] != 'addition'){
-				$result = $result."<tr>";
-				$result = $result."<td>".$id[$i]['name']."</td>";
-				$result = $result."<td>".$_SESSION['data'][$id[$i]['id']]."</td>";
-				$result = $result."</tr>";
-			}
+		$result = "<div class='container joinForm'><h1 align='center'>第15屆暑期中央松數營報名表 - 團報單</h1><table class='table table-striped'>";
+		$result = $result."<td><tr>學校</tr><tr>".$_SESSION['data']['groupSchool']."</tr><td>";
+		$result = $result."<td><tr>縣/市</tr><tr>".$_SESSION['data']['groupCity']."</tr><td>";
+		for ($i = 0; $i < 5; $i++){
+			if ($_SESSION['data']['groupName'.$i])
+				$result = $result."<td><tr>姓名</tr><tr>".$_SESSION['data']['groupName'.$i]."</tr><td>";
 		}
 		$result = $result."</table>";
 		$result = $result."<div align='center'><a class='btn btn-default' href='index.php' align='right'>修改</a>  ";
