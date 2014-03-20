@@ -15,8 +15,10 @@
 
 <!-- self css -->
 <link rel="stylesheet" href="../style.css">
-<script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<title>報名 - 2014中央松數營</title>
+
 </head>
 <body>
 <?php
@@ -39,5 +41,5 @@
 	}else
 		header('Location: index.php');
 ?>
-<body>
+</body>
 </html>

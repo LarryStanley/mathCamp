@@ -15,14 +15,16 @@
 
 <!-- self css -->
 <link rel="stylesheet" href="../style.css">
-<script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<title>報名 - 2014中央松數營</title>
+
 </head>
 <body>
 <div class='container joinForm'>
 	<h1 align='center'>第15屆暑期中央松數營報名表</h1>
 	<form class='form-horizontal' role='form' id='joinForm' action='processJoin.php' method='POST'>
-		<p align='center'>放輕鬆，報名松數營很簡單！<br>我們需了解你的一些基本資料</p>
+		<p align='center'>放輕鬆，報名松數營很簡單！ 我們需了解你的一些基本資料</p>
 <?php
 	if ($_SESSION['placeholder'] == ''){
 		for ($i = 0; $i < sizeof($id); $i++) {
