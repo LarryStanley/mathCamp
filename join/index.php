@@ -32,9 +32,9 @@
 	for ($i = 0; $i < sizeof($id); $i++) {
 		if($id[$i]['type'] == 'text')
 			echo printTextForm($id[$i]['id'], $id[$i]['name'], $_SESSION['data'][$id[$i]['id']], $_SESSION['additionClass'][$id[$i]['id']], $id[$i]['name']);
-		else if($id[$i]['type'] = 'radio')
+		else if($id[$i]['type'] == 'radio')
 			echo printRadioForm($id[$i]['id'], $id[$i]['name'], $id[$i]['value'], $id[$i]['lable'], $id[$i]['check']);
-		else if ($id[$i]['type'] = 'textarea')
+		else if ($id[$i]['type'] == 'textarea')
 			echo printTextArea($id[$i]['id'], $id[$i]['name'], $_SESSION['additionClass'][$id[$i]['id']]);
 	}
 ?>
