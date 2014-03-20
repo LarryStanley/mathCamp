@@ -44,7 +44,8 @@
 	function printTextArea($id, $labelName, $additionClass) {
 		$result = $result."<div class='form-group ".$additionClass."' id='".$id."Form'>";
 		$result = $result."<label class='col-sm-4 control-label'>".$labelName."</label>";
-		$result = $result."<div class='col-sm-8'><textarea class='form-control' rows='4' name='".$id."' id='".$id."'>";
+		$result = $result."<div class='col-sm-8'>";
+		$result = $result."<textarea class='form-control' rows='4' name='".$id."' id='".$id."'>";
 		$result = $result."</textarea></div></div>";
 		return $result;
 	}
