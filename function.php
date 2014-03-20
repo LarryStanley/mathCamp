@@ -53,8 +53,11 @@
 		$result = $result."</textarea></div></div>";
 		return $result;
 	}
+	function printAddition($text) {
+		return "<p align='center'>".$text."</p>";
+	}
 	
-	/*function checkSecurityNumber($id){
+	function checkSecurityNumber($id){
 		$id = strtoupper($id);
 		//建立字母分數陣列
 		$headPoint = array(
@@ -92,5 +95,5 @@
 		}else{
 		   return false;
 		}
-	}*/
+	}
 ?>
