@@ -27,10 +27,10 @@
 	// 顯示報名頁面
 	
 	// 報名表陣列
-	$idInfo = array(
-		0=>array("id"=>"name", "labelName"=>"姓名", "value"=>$_SESSION['data']['name'], "additionClass"=>$_SESSION['additionClass']['name'], "placeholder"=>"姓名"),
-		1=>array("id"=>"nickname", "labelName"=>"綽號", "value"=>$_SESSION['data']['nickname'], "additionClass"=>$_SESSION['additionClass']['nickname'], "placeholder"=>"綽號"),
-	);
+	$idInfo = array();
+	for ($i = 0; $i < sizeof($id); $i++){
+		$idInfo[$i] = array("id"=>$id[$i]['id'], "labelName"=>$id[$i]['name'], "value"=>$_SESSION['data'][$id[$i]['id']], "additionClass"=>$_SESSION['additionClass'][$id[$i]['id']], "placeholder"=>$id[$i]['name']);
+	}
 	// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
 	for ($i = 0; $i < sizeof($idInfo); $i++) {
 		echo printTextForm($idInfo[$i]["id"], $idInfo[$i]["labelName"], $idInfo[$i]["value"], $idInfo[$i]["additionClass"], $idInfo[$i]["placeholder"]);
