@@ -73,7 +73,7 @@
 		$result->execute($where);
 		session_destroy();
 		echo '<div class="container center" align="center"><h1>恭喜你報名成功了！</h1>';
-		echo "<a class='btn btn-default' href='group.php' align='right'>撰寫團報單</a></div>";
+		echo "<a class='btn btn-default' href='../group/' align='right'>撰寫團報單</a></div>";
 	}else{
 		header('Location: index.php');
 	}

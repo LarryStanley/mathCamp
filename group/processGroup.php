@@ -23,8 +23,10 @@
 	// 若欄位不正確返回 index.php
 	// 若欄位正確前往   result.php
 	if (!$checkColumn){
+		echo 'fail';
 		header('Location: index.php');
 	}else{
+		echo 'success';
 		$_SESSION['success'] = true;
 		header('Location: result.php');
 	}	
