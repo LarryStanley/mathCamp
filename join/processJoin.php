@@ -19,7 +19,8 @@
 		$_SESSION['success'] = true;
 		// 儲存資料
 		for ($i = 0; $i < sizeof($id); $i++){
-			$_SESSION['data'][$id[$i]['id']] = $_POST[$id[$i]['id']];
+			if ($id[$i]['type'] != 'addition')
+				$_SESSION['data'][$id[$i]['id']] = $_POST[$id[$i]['id']];
 		}
 		header('Location: result.php');
 	}	

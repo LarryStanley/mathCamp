@@ -2,8 +2,9 @@
 	$id = array(
 		0=> array('id'=>'name', 'name'=>'姓名', 'type'=>'text'),
 		1=> array('id'=>'nickname', 'name'=>'綽號', 'type'=>'text'),
-		2=> array('id'=>'sex', 'name'=>'性別', 'type'=>'radio', 'lable'=>array(0=>'男', 1=>'女'), 'value'=>array(0=>'boy', 1=>'girl'), 'check'=>array(0=>true, 1=>false)),
+		2=> array('id'=>'sex', 'name'=>'性別', 'type'=>'radio', 'lable'=>array(0=>'男', 1=>'女'), 'value'=>array(0=>'男', 1=>'男'), 'check'=>array(0=>true, 1=>false)),
 		3=> array('id'=>'securityNumber', 'name'=>'身分證字號', 'type'=>'text'),
+		4=> array('type'=>'addition', 'text'=>'這很重要，關於你的緊急聯絡人'),
 		4=> array('id'=>'phone', 'name'=>'聯絡電話', 'type'=>'text'),
 		5=> array('id'=>'cellphone', 'name'=>'手機', 'type'=>'text'),
 		6=> array('id'=>'address', 'name'=>'聯絡地址', 'type'=>'text'),
@@ -35,5 +36,9 @@
 		}
 		$result = $result."</div></div>";
 		return $result;
+	}
+	
+	function printAdditionText($text) {
+		return "<p>".$text."</p>";
 	}
 ?>
