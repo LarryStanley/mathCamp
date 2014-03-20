@@ -15,11 +15,12 @@
 		12=> array('id'=>'parentsRelation', 'name'=>'緊急聯絡人關係', 'type'=>'text', 'required'=>true),
 		13=> array('id'=>'parentsPhone', 'name'=>'緊急聯絡人電話', 'type'=>'text', 'required'=>true),
 		14=> array('id'=>'parentsAddress', 'name'=>'緊急聯絡人地址', 'type'=>'text', 'required'=>true),
-		15=> array('id'=>'tshirtsize', 'name'=>'活動T-shirt size', 'type'=>'radio', 'lable'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'value'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'check'=>array(0=>true, 1=>false, 2=>false, 3=>false, 4=>false), 'required'=>false),
-		16=> array('id'=>'diet', 'name'=>'特殊飲食習慣', 'type'=>'radio', 'lable'=>array(0=>'葷', 1=>'素'), 'value'=>array(0=>'葷', 1=>'素'), 'check'=>array(0=>true, 1=>false), 'required'=>false),
-		17=> array('id'=>'illness', 'name'=>'特殊病例', 'type'=>'text', 'required'=>false),
-		18=> array('id'=>'introduction', 'name'=>'自我介紹', 'type'=>'textarea', 'required'=>true),
-		19=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
+		15=> array('type'=>'addition', 'text'=>'接下來是一些關於活動所需的資訊'),
+		16=> array('id'=>'tshirtsize', 'name'=>'活動T-shirt size', 'type'=>'radio', 'lable'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'value'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'check'=>array(0=>true, 1=>false, 2=>false, 3=>false, 4=>false), 'required'=>false),
+		17=> array('id'=>'diet', 'name'=>'特殊飲食習慣', 'type'=>'radio', 'lable'=>array(0=>'葷', 1=>'素'), 'value'=>array(0=>'葷', 1=>'素'), 'check'=>array(0=>true, 1=>false), 'required'=>false),
+		18=> array('id'=>'illness', 'name'=>'特殊病例', 'type'=>'text', 'required'=>false),
+		19=> array('id'=>'introduction', 'name'=>'自我介紹', 'type'=>'textarea', 'required'=>true),
+		20=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
 	);
 	
 	function printTextForm($id, $labelName, $value, $additionClass, $placeholder) {

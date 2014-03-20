@@ -22,7 +22,7 @@
 <div class='container joinForm'>
 	<h1 align='center'>第15屆暑期中央松數營報名表</h1>
 	<form class='form-horizontal' role='form' id='joinForm' action='processJoin.php' method='POST'>
-		<p align='center'>放輕鬆，報名松數營很簡單！</p>
+		<p align='center'>放輕鬆，報名松數營很簡單！<br>我們需了解你的一些基本資料</p>
 <?php
 	// 顯示報名頁面
 	// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
