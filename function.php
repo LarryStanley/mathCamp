@@ -57,7 +57,7 @@
 		return "<p align='center'>".$text."</p>";
 	}
 	
-	function pid_check($pid){   
+	function checkSecurityNumber($pid){   
 		$iPidLen = strlen($pid);
 		if(!preg_match(&quot;/^[A-Za-z][1-2][0-9]{8}$/&quot;,$pid) &amp;&amp; $iPidLen != 10)
 			return FALSE;
