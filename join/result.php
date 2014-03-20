@@ -33,7 +33,7 @@
 			}
 		}
 		$result = $result."</table>";
-		$result = $result."<a class='btn btn-default' href='index.php' align='right'>修改</a></div>";
+		$result = $result."<a class='btn btn-default' href='index.php' align='right'>修改</a>";
 		$result = $result."<a class='btn btn-default' href='success.php' align='right'>送出</a></div>";
 		echo $result;
 	}else
