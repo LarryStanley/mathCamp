@@ -23,14 +23,14 @@
 	// 若欄位都正確顯示結果
 	// 若欄位錯誤返回 index.php
 	if ($_SESSION['success']){
-		$result = "<div class='container joinForm'><h1 align='center'>第15屆暑期中央松數營報名表</h1>";
+		$result = "<div class='container joinForm'><h1 align='center'>第15屆暑期中央松數營報名表</h1><table class='table table-striped'>";
 		for ($i = 0; $i < sizeof($id); $i++){
 			$result = $result."<tr>";
 			$result = $result."<td>".$id[$i]['name']."</td>";
 			$result = $result."<td>".$_SESSION['data'][$id[$i]['id']]."</td>";
 			$result = $result."</tr>";
 		}
-		$result = $result."</div>";
+		$result = $result."</table></div>";
 		echo $result;
 	}else
 		header('Location: index.php');
