@@ -28,8 +28,8 @@
 	}else{
 		// 顯示報名頁面
 		$idInfo = array(
-			1=>array("id"=>"name", "labelName"=>"姓名", "value"=>$_SESSION['name'], "additionClass"=>"", "placeholder"=>"姓名"),
-			2=>array("id"=>"nickname", "labelName"=>"綽號", "value"=>$_SESSION['nickname'], "additionClass"=>"", "placeholder"=>"綽號"),
+			0=>array("id"=>"name", "labelName"=>"姓名", "value"=>$_SESSION['name'], "additionClass"=>"", "placeholder"=>"姓名"),
+			1=>array("id"=>"nickname", "labelName"=>"綽號", "value"=>$_SESSION['nickname'], "additionClass"=>"", "placeholder"=>"綽號"),
 		);
 		// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
 		for ($i = 0; $i < sizeof($idInfo); $i++) {
