@@ -18,11 +18,11 @@
 		for ($i = 0; $i < sizeof($id); $i++){
 			$_SESSION['data'][$id[$i]['id']] = $_POST[$id[$i]['id']];
 		}
-		echo $_POST[$id[$i]['id']];
-		echo '<br>'.$_SESSION['data'][$id[$i]['id']];
-		//header('Location: index.php');
+		header('Location: index.php');
 	}else{
 		$_SESSION['success'] = true;
-		header('Location: result.php');
+		//header('Location: result.php');
+		echo $_POST[$id[$i]['id']];
+		echo '<br>'.$_SESSION['data'][$id[$i]['id']];
 	}	
 ?>
