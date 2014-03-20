@@ -26,8 +26,8 @@
 		$result = "<div class='container joinForm'><h1 align='center'>第15屆暑期中央松數營報名表</h1><table class='table table-striped'>";
 		for ($i = 0; $i < sizeof($id); $i++){
 			$result = $result."<tr>";
-			$result = $result."<td>".$id[$i]['name']."</td>";
-			$result = $result."<td>".$id[$i]['id']."</td>";
+			$result = $result."<td>".$_SESSION[$id[$i]['name']]."</td>";
+			$result = $result."<td>".$_SESSION[$id[$i]['id']]."</td>";
 			$result = $result."</tr>";
 		}
 		$result = $result."</table></div>";
