@@ -68,11 +68,11 @@
 				':addition' => $_SESSION['data']['addition']);
 	$result->execute($where);
 	session_destroy();
-	echo <<<FORM
+	echo<<<FORM
 		<div class="container center" align="center"><h1>恭喜你報名成功了！</h1>
 			<a class='btn btn-default' href='group.php' align='right'>撰寫團報單</a>		
 		</div>
-	FORM;
+FORM;
 ?>
 </body>
 </html>
