@@ -8,7 +8,7 @@
 	for ($i = 0; $i < 5; $i++){
 		if (empty($_POST['groupName'.$i]) == false){
 			$_SESSION['data']['groupName'.$i] = $_POST['groupName'.$i];
-			$count++;
+			$count = $count + 1;
 		}
 	}
 	$_SESSION['data']['groupSchool'] = $_POST['school'];
@@ -21,10 +21,10 @@
 	
 	// 若欄位不正確返回 index.php
 	// 若欄位正確前往   result.php
-	if (!$checkColumn){
-		header('Location:index.php');
-	}else{
-		$_SESSION['success'] = true;
+	if ($checkColumn){
 		header('Location:result.php');
+		$_SESSION['success'] = true;
+	}else{
+		header('Location:index.php');
 	}	
 ?>
