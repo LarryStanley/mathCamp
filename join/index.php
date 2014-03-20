@@ -36,6 +36,8 @@
 			echo printRadioForm($id[$i]['id'], $id[$i]['name'], $id[$i]['value'], $id[$i]['lable'], $id[$i]['check']);
 		else if ($id[$i]['type'] == 'textarea')
 			echo printTextArea($id[$i]['id'], $id[$i]['name'], $_SESSION['additionClass'][$id[$i]['id']], $_SESSION['data'][$id[$i]['id']]);
+		else if ($id[$i]['type'] == 'text')
+			echo printText($id[$i]['text']);
 	}
 ?>
 		<div align='right'>

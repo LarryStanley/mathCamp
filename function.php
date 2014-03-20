@@ -10,15 +10,16 @@
 		7=> array('id'=>'email', 'name'=>'Email', 'type'=>'text', 'required'=>true),
 		8=> array('id'=>'school', 'name'=>'就讀學校', 'type'=>'text', 'required'=>true),
 		9=> array('id'=>'grade', 'name'=>'年級', 'type'=>'text', 'required'=>true),
-		10=> array('id'=>'parentsName', 'name'=>'緊急聯絡人姓名', 'type'=>'text', 'required'=>true),
-		11=> array('id'=>'parentsRelation', 'name'=>'緊急聯絡人關係', 'type'=>'text', 'required'=>true),
-		12=> array('id'=>'parentsPhone', 'name'=>'緊急聯絡人電話', 'type'=>'text', 'required'=>true),
-		13=> array('id'=>'parentsAddress', 'name'=>'緊急聯絡人地址', 'type'=>'text', 'required'=>true),
-		14=> array('id'=>'tshirtsize', 'name'=>'活動T-shirt size', 'type'=>'radio', 'lable'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'value'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'check'=>array(0=>true, 1=>false, 2=>false, 3=>false, 4=>false), 'required'=>false),
-		15=> array('id'=>'diet', 'name'=>'特殊飲食習慣', 'type'=>'radio', 'lable'=>array(0=>'葷', 1=>'素'), 'value'=>array(0=>'葷', 1=>'素'), 'check'=>array(0=>true, 1=>false), 'required'=>false),
-		16=> array('id'=>'illness', 'name'=>'特殊病例', 'type'=>'text', 'required'=>false),
-		17=> array('id'=>'introduction', 'name'=>'自我介紹', 'type'=>'textarea', 'required'=>true),
-		18=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
+		10=> array('type'=>'text', 'text'=>'這很重要，關於你的緊急聯絡人'),
+		11=> array('id'=>'parentsName', 'name'=>'緊急聯絡人姓名', 'type'=>'text', 'required'=>true),
+		12=> array('id'=>'parentsRelation', 'name'=>'緊急聯絡人關係', 'type'=>'text', 'required'=>true),
+		13=> array('id'=>'parentsPhone', 'name'=>'緊急聯絡人電話', 'type'=>'text', 'required'=>true),
+		14=> array('id'=>'parentsAddress', 'name'=>'緊急聯絡人地址', 'type'=>'text', 'required'=>true),
+		15=> array('id'=>'tshirtsize', 'name'=>'活動T-shirt size', 'type'=>'radio', 'lable'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'value'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'check'=>array(0=>true, 1=>false, 2=>false, 3=>false, 4=>false), 'required'=>false),
+		16=> array('id'=>'diet', 'name'=>'特殊飲食習慣', 'type'=>'radio', 'lable'=>array(0=>'葷', 1=>'素'), 'value'=>array(0=>'葷', 1=>'素'), 'check'=>array(0=>true, 1=>false), 'required'=>false),
+		17=> array('id'=>'illness', 'name'=>'特殊病例', 'type'=>'text', 'required'=>false),
+		18=> array('id'=>'introduction', 'name'=>'自我介紹', 'type'=>'textarea', 'required'=>true),
+		19=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
 	);
 	
 	function printTextForm($id, $labelName, $value, $additionClass, $placeholder) {
@@ -49,5 +50,9 @@
 		$result = $result."<textarea class='form-control' rows='4' name='".$id."' id='".$id."'>".$value;
 		$result = $result."</textarea></div></div>";
 		return $result;
+	}
+	
+	function printText($text) {
+		return "<p align='center'>".$text."</p>"
 	}
 ?>
