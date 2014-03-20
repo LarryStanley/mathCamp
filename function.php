@@ -57,17 +57,43 @@
 		return "<p align='center'>".$text."</p>";
 	}
 	
-	function checkSecurityNumber($pid){   
-		$iPidLen = strlen($pid);
-		if(!preg_match(&quot;/^[A-Za-z][1-2][0-9]{8}$/&quot;,$pid) &amp;&amp; $iPidLen != 10)
-			return FALSE;
-		$head = array(&quot;A&quot;=&gt;1,&quot;B&quot;=&gt;0,&quot;C&quot;=&gt;9,&quot;D&quot;=&gt;8,&quot;E&quot;=&gt;7,&quot;F&quot;=&gt;6,&quot;G&quot;=&gt;5,&quot;H&quot;=&gt;4,&quot;I&quot;=&gt;9,&quot;J&quot;=&gt;3,&quot;K&quot;=&gt;2,&quot;M&quot;=&gt;1,&quot;N&quot;=&gt;0,&quot;O&quot;=&gt;8,&quot;P&quot;=&gt;9,&quot;Q&quot;=&gt;8,&quot;T&quot;=&gt;5,&quot;U&quot;=&gt;4,&quot;V&quot;=&gt;3,&quot;W&quot;=&gt;1,&quot;X&quot;=&gt;3,&quot;Z&quot;=&gt;0,&quot;L&quot;=&gt;2,&quot;R&quot;=&gt;7,&quot;S&quot;=&gt;6,&quot;Y&quot;=&gt;2);
-		$pid  = strtoupper($pid);
-		$iSum  = 0;
-		for($i=0;$i&lt;$iPidLen;$i++){
-			$sIndex = substr($pid,$i,1);
-			$iSum   += (empty($i)) ? $head[$sIndex] : intval($sIndex) * abs( 9 - base_convert($i,10,9) );
+	function checkSecurityNumber($id){
+		$id = strtoupper($id);
+		//建立字母分數陣列
+		$headPoint = array(
+			'A'=>1,'I'=>39,'O'=>48,'B'=>10,'C'=>19,'D'=>28,
+			'E'=>37,'F'=>46,'G'=>55,'H'=>64,'J'=>73,'K'=>82,
+			'L'=>2,'M'=>11,'N'=>20,'P'=>29,'Q'=>38,'R'=>47,
+			'S'=>56,'T'=>65,'U'=>74,'V'=>83,'W'=>21,'X'=>3,
+			'Y'=>12,'Z'=>30
+		);
+		//建立加權基數陣列
+		$multiply = array(8,7,6,5,4,3,2,1);
+		//檢查身份字格式是否正確
+		if (ereg("^[a-zA-Z][1-2][0-9]+$",$id) AND strlen($id) == 10){
+			//切開字串
+			$len = strlen($id);
+			for($i=0; $i<$len; $i++){
+				$stringArray[$i] = substr($id,$i,1);
+			}
+			//取得字母分數
+			$total = $headPoint[array_shift($stringArray)];
+			//取得比對碼
+			$point = array_pop($stringArray);
+			//取得數字分數
+			$len = count($stringArray);
+			for($j=0; $j<$len; $j++){
+				$total += $stringArray[$j]*$multiply[$j];
+			}
+			//計算餘數碼並比對
+			$last = (($total%10) == 0 )?0:(10-($total%10));
+			if ($last != $point) {
+				return false;
+			} else {
+				return true;
+			}
+		}else{
+		   return false;
 		}
-		return ( $iSum  % 10 == 0 ) ? TRUE:FALSE;
 	}
 ?>
