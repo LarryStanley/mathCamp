@@ -26,7 +26,7 @@
 	<form class='form-horizontal' role='form' id='joinForm' action='processJoin.php' method='POST'>
 		<p align='center'>放輕鬆，報名松數營很簡單！ 我們需了解你的一些基本資料</p>
 <?php
-	if ($_SESSION['placeholder'] == ''){
+	if (!$_SESSION['placeholder'] == ''){
 		for ($i = 0; $i < sizeof($id); $i++) {
 			if ($id[$i]['type'] == 'text'){
 				$_SESSION['placeholder'][$id[$i]['id']] = $id[$i]['name'];
