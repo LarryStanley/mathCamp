@@ -16,7 +16,7 @@
 	if (!$checkColumn){
 		// 儲存資料
 		for ($i = 0; $i < sizeof($id); $i++){
-			$_SESSION['data'][$id[$i]['id']] = $_POST[$id[$i]['id']];
+			$_SESSION[$id[$i]['id']] = $_POST[$id[$i]['id']];
 		}
 		header('Location: index.php');
 	}else{
