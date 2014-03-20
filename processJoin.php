@@ -1,5 +1,5 @@
 <?php
-include '../sqlInfo.php';
+include '../../sqlInfo.php';
 $connect = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASSWD);
 $connect->query('SET NAMES UTF8');
 $result = $connect->prepare("INSERT into join_member values(

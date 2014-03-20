@@ -17,11 +17,13 @@
 		14=> array('id'=>'parentsAddress', 'name'=>'緊急聯絡人地址', 'type'=>'text', 'required'=>true),
 		15=> array('type'=>'addition', 'text'=>'接下來是一些關於活動所需的資訊'),
 		16=> array('id'=>'tshirtsize', 'name'=>'活動T-shirt size', 'type'=>'radio', 'lable'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'value'=>array(0=>'2XL', 1=>'XL', 2=>'L', 3=>'M', 4=>'S'), 'check'=>array(0=>true, 1=>false, 2=>false, 3=>false, 4=>false), 'required'=>false),
-		17=> array('id'=>'diet', 'name'=>'特殊飲食習慣', 'type'=>'radio', 'lable'=>array(0=>'葷', 1=>'素'), 'value'=>array(0=>'葷', 1=>'素'), 'check'=>array(0=>true, 1=>false), 'required'=>false),
+		17=> array('id'=>'diet', 'name'=>'葷或素', 'type'=>'radio', 'lable'=>array(0=>'葷', 1=>'素'), 'value'=>array(0=>'葷', 1=>'素'), 'check'=>array(0=>true, 1=>false), 'required'=>false),
+		18=> array('id'=>'otherDietInfo', 'name'=>'特殊飲食習慣', 'type'=>'text', 'required'=>false),
 		18=> array('id'=>'illness', 'name'=>'特殊病例', 'type'=>'text', 'required'=>false),
 		19=> array('type'=>'addition', "text"=>'最後最後，來個自我介紹吧！'),
 		20=> array('id'=>'introduction', 'name'=>'自我介紹', 'type'=>'textarea', 'required'=>true),
-		21=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
+		21=> array('id'=>'source', 'name'=>'營隊訊息來源', 'type'=>'textarea', 'required'=>true),
+		22=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
 	);
 	
 	function printTextForm($id, $labelName, $value, $additionClass, $placeholder, $additionText) {
