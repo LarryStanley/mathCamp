@@ -24,7 +24,7 @@
 	// 檢查身分證字號
 	if (!checkSecurityNumber($_POST['securityNumber'])){
 		$checkColumn = false;
-		$_SESSION['additionClass']['securitNumber'] = "has-error";
+		$_SESSION['additionClass']['securityNumber'] = "has-error";
 		$_SESSION['placeholder'][$id[$i]['id']] = "你的身分證字號有點問題喔!稍微檢查一下吧!";
 	}
 	
