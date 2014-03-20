@@ -24,6 +24,13 @@
 	<form class='form-horizontal' role='form' id='joinForm' action='processJoin.php' method='POST'>
 		<p align='center'>放輕鬆，報名松數營很簡單！<br>我們需了解你的一些基本資料</p>
 <?php
+	if (!$_SESSION['placeholder']){
+		for ($i = 0; $i < sizeof($id); $i++) {
+			if ($id[$i]['type'] == 'text'){
+				$_SESSION['placeholder'][$id[$i]['id']] = $id[$i]['id'];
+			}
+		}
+	}
 	// 顯示報名頁面
 	// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
 	// printRadioForm($id, $radioName, $value, $label, $check)
@@ -31,7 +38,7 @@
 	// function printTextArea($id, $labelName, $additionClass, $value)
 	for ($i = 0; $i < sizeof($id); $i++) {
 		if($id[$i]['type'] == 'text')
-			echo printTextForm($id[$i]['id'], $id[$i]['name'], $_SESSION['data'][$id[$i]['id']], $_SESSION['additionClass'][$id[$i]['id']], $id[$i]['name']);
+			echo printTextForm($id[$i]['id'], $id[$i]['name'], $_SESSION['data'][$id[$i]['id']], $_SESSION['additionClass'][$id[$i]['id']], $_SESSION['placeholder'][$id[$i]['id']]);
 		else if($id[$i]['type'] == 'radio')
 			echo printRadioForm($id[$i]['id'], $id[$i]['name'], $id[$i]['value'], $id[$i]['lable'], $id[$i]['check']);
 		else if ($id[$i]['type'] == 'textarea')

@@ -7,6 +7,7 @@
 		if ($id[$i]['required']){
 			if (empty($_POST[$id[$i]['id']])){
 				$_SESSION['additionClass'][$id[$i]['id']] = "has-error";
+				$_SESSION['placeholder'][$id[$i]['id']] = "別忘了填入".$id[$i]['name']."噢!";
 				$checkColumn = false;
 			}else
 				$_SESSION['additionClass'][$id[$i]['id']] = "has-success";
@@ -14,8 +15,18 @@
 	}
 	
 	// 檢查email
-	if (!eregi("^[_.0-9a-z-]+@([0-9a-z-]+.)+[a-z]{2,3}$",$_POST['email']))
+	if (!eregi("^[_.0-9a-z-]+@([0-9a-z-]+.)+[a-z]{2,3}$",$_POST['email'])){
 		$checkColumn = false;
+		$_SESSION['additionClass']['email'] = "has-error";
+		$_SESSION['placeholder'][$id[$i]['id']] = "你的Email有點問題喔!稍微檢查一下吧!";
+	}
+	
+	// 檢查身分證字號
+	if (!checkSecurityNumber($_POST['securityNumber'])){
+		$checkColumn = false;
+		$_SESSION['additionClass']['securitNumber'] = "has-error";
+		$_SESSION['placeholder'][$id[$i]['id']] = "你的身分證字號有點問題喔!稍微檢查一下吧!";
+	}
 	
 	// 儲存資料
 	for ($i = 0; $i < sizeof($id); $i++){
