@@ -1,4 +1,9 @@
 <?php
+	$id = array(
+		0=> array('id'=>'name', 'name'=>'姓名'),
+		1=> array('id'=>'nickname', 'name'=>'綽號'),
+	);
+	
 	function printTextForm($id, $labelName, $value, $additionClass, $placeholder) {
 		$result = "<div class='form-group ".$additionClass."' id='".$id."Form'>";
 		$result = $result."<label class='col-sm-4 control-label'>".$labelName."</label>";

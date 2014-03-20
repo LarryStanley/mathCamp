@@ -24,20 +24,16 @@
 	<form class='form-horizontal' role='form' id='joinForm' action='processJoin.php' method='POST'>
 		<p align='center'>放輕鬆，報名松數營很簡單！</p>
 <?php
-	if ($_SESSION['success']){
-		// 顯示報名成功頁面
-	}else{
-		// 顯示報名頁面
-		
-		// 報名表陣列
-		$idInfo = array(
-			0=>array("id"=>"name", "labelName"=>"姓名", "value"=>$_SESSION['name'], "additionClass"=>$_SESSION['additionClass']['name'], "placeholder"=>"姓名"),
-			1=>array("id"=>"nickname", "labelName"=>"綽號", "value"=>$_SESSION['nickname'], "additionClass"=>$_SESSION['additionClass']['nickname'], "placeholder"=>"綽號"),
-		);
-		// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
-		for ($i = 0; $i < sizeof($idInfo); $i++) {
-			echo printTextForm($idInfo[$i]["id"], $idInfo[$i]["labelName"], $idInfo[$i]["value"], $idInfo[$i]["additionClass"], $idInfo[$i]["placeholder"]);
-		}
+	// 顯示報名頁面
+	
+	// 報名表陣列
+	$idInfo = array(
+		0=>array("id"=>"name", "labelName"=>"姓名", "value"=>$_SESSION['name'], "additionClass"=>$_SESSION['additionClass']['name'], "placeholder"=>"姓名"),
+		1=>array("id"=>"nickname", "labelName"=>"綽號", "value"=>$_SESSION['nickname'], "additionClass"=>$_SESSION['additionClass']['nickname'], "placeholder"=>"綽號"),
+	);
+	// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
+	for ($i = 0; $i < sizeof($idInfo); $i++) {
+		echo printTextForm($idInfo[$i]["id"], $idInfo[$i]["labelName"], $idInfo[$i]["value"], $idInfo[$i]["additionClass"], $idInfo[$i]["placeholder"]);
 	}
 ?>
 		<div align='right'>
