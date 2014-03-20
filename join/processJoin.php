@@ -17,7 +17,7 @@
 	// 若欄位不正確返回 index.php
 	// 若欄位正確前往   result.php
 	if (!$checkColumn)
-		head('index.php');
+		header('Location: index.php');
 	else
 		echo '成功';
 	
