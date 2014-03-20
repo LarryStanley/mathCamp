@@ -29,8 +29,8 @@
 			$_SESSION['placeholder']['groupSchool'] = '學校';
 			$_SESSION['placeholder']['groupCity'] = '縣/市';
 		}
-		echo printTextForm('school', '學校', 'school', $_SESSION['additionClass']['groupSchool'], $_SESSION['placeholder']['groupSchool'], '');
-		echo printTextForm('city', '縣/市', 'city', $_SESSION['additionClass']['groupCity'], $_SESSION['placeholder']['groupCity'], '');
+		echo printTextForm('school', '學校',  $_SESSION['data']['groupSchool'], $_SESSION['additionClass']['groupSchool'], $_SESSION['placeholder']['groupSchool'], '');
+		echo printTextForm('city', '縣/市',  $_SESSION['additionClass']['groupCity'], $_SESSION['additionClass']['groupCity'], $_SESSION['placeholder']['groupCity'], '');
 	?>
 		<div align='right'>
 			<input type='submit' class='btn btn-default submit' value='完成'>
