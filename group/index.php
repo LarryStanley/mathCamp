@@ -36,6 +36,7 @@
 		echo '<HR>';
 		for ($i= 0; $i < 5; $i++)
 			echo printTextForm('groupName'.$i, '姓名'.$chineseNumber[$i],  $_SESSION['data']['groupName'.$i], $_SESSION['additionClass']['groupName'.$i], $_SESSION['placeholder']['groupName'.$i], '');
+		echo '<div algin="right"><font color="red">'.$_SESSION['groupAlert'].'</font></div>'
 	?>
 		<div align='right'>
 			<input type='submit' class='btn btn-default submit' value='完成'>

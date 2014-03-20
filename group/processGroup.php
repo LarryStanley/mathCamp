@@ -15,8 +15,10 @@
 	$_SESSION['data']['groupSchool'] = $_POST['school'];
 	$_SESSION['data']['groupCity'] = $_POST['city'];
 	
-	if ($count != 3 || $count != 5)
+	if ($count != 3 || $count != 5){
 		$checkColumn = false;
+		$_SESSION['groupAlert'] = '團報人數必須三人或五人喔！！';
+	}
 	
 	// 若欄位不正確返回 index.php
 	// 若欄位正確前往   result.php
