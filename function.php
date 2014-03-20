@@ -37,9 +37,4 @@
 		$result = $result."</div></div>";
 		return $result;
 	}
-	
-	function printAdditionText($text) {
-		$result = "<p>".$text."</p>";
-		return $result;
-	}
 ?>
