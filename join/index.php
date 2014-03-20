@@ -21,13 +21,20 @@
 <body>
 <div class='container joinForm'>
 	<form class='form-horizontal' role='form' id='joinForm' action='processJoin.php' method='POST'>
+		<p align='center'>放輕鬆，報名松數營很簡單！</p>
 <?php
 	if ($_SESSION['success']){
 		// 顯示報名成功頁面
 	}else{
 		// 顯示報名頁面
+		$idInfo = array(
+			1=>array("id"=>"name", "labelName"=>"姓名", "value"=>$_SESSION['name'], "additionClass"=>"", "placeholder"=>"姓名"),
+			2=>array("id"=>"nickname", "labelName"=>"綽號", "value"=>$_SESSION['nickname'], "additionClass"=>"", "placeholder"=>"綽號"),
+		);
 		// printTextForm($id, $labelName, $value, $additionClass, $placeholder)
-		echo printTextForm("name", "姓名", "顆顆", "has-success", "姓名");
+		for ($i = 0; $i < sizeof($idInfo); $i++) {
+			echo printTextForm($idInfo[$i]["id"], $idInfo[$i]["labelName"], $idInfo[$i]["value"], $idInfo[$i]["additionClass"], $idInfo[$i]["placeholder"]);
+		}
 	}
 ?>
 	</form>
