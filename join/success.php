@@ -68,7 +68,7 @@
 				':addition' => $_SESSION['data']['addition']);
 	$result->execute($where);
 	session_destroy();
-	echo '恭喜你報名成功了！';
+	echo '<div class="container center"><h1>恭喜你報名成功了！</h1></div>';
 ?>
 </body>
 </html>
