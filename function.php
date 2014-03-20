@@ -18,6 +18,7 @@
 		15=> array('id'=>'diet', 'name'=>'特殊飲食習慣', 'type'=>'radio', 'lable'=>array(0=>'葷', 1=>'素'), 'value'=>array(0=>'葷', 1=>'素'), 'check'=>array(0=>true, 1=>false), 'required'=>false),
 		16=> array('id'=>'illness', 'name'=>'特殊病例', 'type'=>'text', 'required'=>false),
 		17=> array('id'=>'introduction', 'name'=>'自我介紹', 'type'=>'textarea', 'required'=>true),
+		18=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
 	);
 	
 	function printTextForm($id, $labelName, $value, $additionClass, $placeholder) {
