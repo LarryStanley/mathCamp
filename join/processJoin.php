@@ -14,16 +14,13 @@
 	// 若欄位不正確返回 index.php
 	// 若欄位正確前往   result.php
 	if (!$checkColumn){
+		header('Location: index.php');
+	}else{
+		$_SESSION['success'] = true;
 		// 儲存資料
 		for ($i = 0; $i < sizeof($id); $i++){
 			$_SESSION['data'][$id[$i]['id']] = $_POST[$id[$i]['id']];
 		}
-		header('Location: index.php');
-	}else{
-		$_SESSION['success'] = true;
-		//header('Location: result.php');
-		echo $_POST['name']."<br>";
-		echo $_POST[$id[0]['id']];
-		echo '<br>'.$_SESSION['data'][$id[0]['id']];
+		header('Location: result.php');
 	}	
 ?>
