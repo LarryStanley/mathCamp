@@ -16,6 +16,22 @@
 <!-- self css -->
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
+<style>
+.joinForm {
+    position: absolute;
+    min-width: 200px;
+    width: 50%;
+    max-width: 600px;
+    height: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+</style>
+
 <title>報名 - 2014中央松數營</title>
 
 </head>

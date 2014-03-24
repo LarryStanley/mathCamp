@@ -17,6 +17,21 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <title>報名 - 2014中央松數營</title>
+<style>
+.joinForm {
+    position: absolute;
+    min-width: 200px;
+    width: 50%;
+    max-width: 600px;
+    height: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+</style>
 
 </head>
 <body>
@@ -38,6 +53,7 @@
 		echo '<div algin="right"><font color="red">'.$_SESSION['groupAlert'].'</font></div>'
 	?>
 		<div align='right'>
+			<a class='btn btn-default' href='../'>返回首頁</a>
 			<input type='submit' class='btn btn-default submit' value='完成'>
 		</div>
 	</form>
