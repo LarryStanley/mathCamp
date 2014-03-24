@@ -9,6 +9,14 @@ body {
 	font-family: impact;
 }
 
+a:hover {
+	color: white;
+}
+
+a:link {
+	color: white;
+}
+
 .slogon {
 	text-align: center;
 	font-size: 60px;	
