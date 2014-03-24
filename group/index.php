@@ -14,7 +14,6 @@
 <link rel="stylesheet" href="../animate.css">
 
 <!-- self css -->
-<link rel="stylesheet" href="../style.css">
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <title>報名 - 2014中央松數營</title>

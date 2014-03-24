@@ -12,9 +12,6 @@
 <!-- css animate  -->
 <link rel="stylesheet" href="../animate.css">
 
-<!-- self css -->
-<link rel="stylesheet" href="../style.css">
-
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <title>報名 - 2014中央松數營</title>
@@ -42,8 +39,8 @@
 					':names' => $names);
 		$result->execute($where);
 		session_destroy();
-		echo '<div class="container center" align="center"><h1>恭喜你團報成功了！</h1>';
-		echo "<p align='center'></p></div>";
+		echo '<div class="container center" align="center"><h1>恭喜你團報成功了！</h1><br>';
+		echo "<a class='btn btn-default' href='../' align='right'>回首頁</a></div>";
 	}else{
 		header('Location: index.php');
 	}
