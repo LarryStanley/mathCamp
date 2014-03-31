@@ -17,6 +17,10 @@ a:link {
 	color: white;
 }
 
+a:visited {
+	color: white;
+}
+
 .slogon {
 	text-align: center;
 	font-size: 60px;	
@@ -71,12 +75,12 @@ a:link {
 }
 
 .white {
-	background-color: #FFFBF0;
+	background-color: #FFFFFF;
 	color:	#3F4850;
 }
 
 .gray {
-	background-color: #D4F2E7;
+	background-color: #F2F2F2;
 	color: #3F4850;
 }
 
