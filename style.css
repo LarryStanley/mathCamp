@@ -4,8 +4,15 @@
 }
 
 body {
-	font-size: 18px;
+	font-size: 20px;
 	letter-spacing:5px;
+	font-family: 'Milonga', cursive;
+
+	margin: 0;
+	padding: 0:
+	background-size: cover;
+	background: #FFFFFF url(images/back.jpg) center center fixed repeat;
+	-moz-background-size: cover;
 }
 
 a:hover {
@@ -19,6 +26,13 @@ a:link {
 a:visited {
 	color: white;
 }
+
+.ttfont{
+     color:#3cb371;
+	 font-weight:bolder;
+	 text-shadow:5px 5px 5px #b0c4de;
+
+ }
 
 .slogon {
 	text-align: center;
@@ -66,9 +80,35 @@ a:visited {
 	height:100% ;
 }
 
+.signNowCenter{
+   position:absolute;
+   font-size:50px;
+   top:40%;
+   bottom:10%;
+   left:45%;
+   width:55%;
+   height:10%; 
+}
+
+.bottomCenter{
+  position:absolute;
+  top:5px;
+  bottom:5px;
+  left:0;
+  right:0;
+  width:100%;
+  height:30%;
+}
+
+.titlebackground{
+	 background-attachment:fixed;
+
+	 background-repeat:repeat;
+}
+
 
 .green {
-	background-color: #5A8F31;
+	background-color: #5A8F31 ;
 	color: white;
 }
 
@@ -110,6 +150,7 @@ a:visited {
 	letter-spacing:1px;
 	background-color: #5A8F31;
 	width: 100%;
+	height:20%;
 	padding-top:15px;
     padding-left:15px;
     padding-right:15px;
