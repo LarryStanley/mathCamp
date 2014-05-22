@@ -88,6 +88,7 @@
 		$result->execute($where);
 		session_destroy();
 		echo '<div class="container center" align="center"><h1>恭喜你報名成功了！</h1>';
+		echo '<p align="center">我們會在24小時內寄信給您確認報名</p>';
 		echo "<a class='btn btn-default' href='../group/' align='right'>撰寫團報單</a>";
 		echo "<a class='btn btn-default' href='../' align='right'>回首頁</a></div>";
 	}else{

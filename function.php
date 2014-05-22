@@ -21,8 +21,8 @@
 		18=> array('id'=>'otherDietInfo', 'name'=>'特殊飲食習慣', 'type'=>'text', 'required'=>false),
 		19=> array('id'=>'illness', 'name'=>'特殊病例', 'type'=>'text', 'required'=>false),
 		20=> array('type'=>'addition', "text"=>'最後最後，來個自我介紹吧！'),
-		21=> array('id'=>'introduction', 'name'=>'自我介紹', 'type'=>'textarea', 'required'=>true),
-		22=> array('id'=>'source', 'name'=>'營隊訊息來源', 'type'=>'textarea', 'required'=>true),
+		21=> array('id'=>'introduction', 'name'=>'自我介紹', 'type'=>'textarea', 'required'=>false),
+		22=> array('id'=>'source', 'name'=>'營隊訊息來源', 'type'=>'textarea', 'required'=>false),
 		23=> array('id'=>'addition', 'name'=>'備註', 'type'=>'textarea', 'required'=>false),
 	);
 	
